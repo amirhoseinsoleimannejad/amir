@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".safe1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical"
+            android:background="#011629"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/a1" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="vertical"
+            android:background="#1C3C58"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/a4">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/a2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/a3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="vertical"
+            android:background="#1C3C58"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#022747"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="زبان مورد نظر را انتخاب کنيد"
+                android:textColor="#FFCC00"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The language you want"
+                android:textColor="#51A8B1"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="فارســي"
+                android:textColor="#ffffff"
+                android:background="#011629"
+                android:layout_marginTop="18dp"
+                android:textSize="16sp"
+                />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="پشتــي"
+                android:textColor="#ffffff"
+                android:background="#011629"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

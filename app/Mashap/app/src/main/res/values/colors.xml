@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ab223c</color>
+    <color name="colorPrimaryDark">#ab223c</color>
+    <color name="colorAccent">#4e4e4e</color>
+    <color name="red">#ff5100</color>
+    <color name="nav_item_state_list">#fff</color>
+
+
+    <color name="cover_white">#90ab223c</color>
+    <color name="bg">#f8f8f8</color>
+    <color name="text_color">#828282</color>
+
+
+</resources>

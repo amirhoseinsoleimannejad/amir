@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.nearbyshops.shopkeeperapp">
+
+    <!--package="org.localareadelivery.distributorapp"-->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_for_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".DistributorLogin"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--
+            <activity
+            android:name=".Intro"
+            android:theme="@style/Theme.Intro" />
+        -->
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrdersHDMenu.OrdersHomeDelivery"
+            android:label="@string/title_activity_orders_home"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+        <!--<activity-->
+            <!--android:name=".HomeDeliveryInventory.HomeDelivery"-->
+            <!--android:label="@string/title_activity_home_delivery"-->
+            <!--android:parentActivityName=".OrdersHomeDelivery.OrdersHomeDelivery"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".OrdersHomeDelivery.OrdersHomeDelivery" />-->
+        <!--</activity>-->
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".HomeDeliveryInventory.HomeDelivery"
+            android:label="@string/title_activity_home_delivery"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity"
+            android:label="Delivery Vehicles"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+        </activity>
+        <activity
+            android:name=".aaDeprecated_DeliveryGuy.AddVehicleSelfActivity"
+            android:label="Add Delivery Vehicle"
+            android:parentActivityName=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity" />
+        </activity>
+        <activity
+            android:name=".aaDeprecated_DeliveryGuy.EditAddressActivity"
+            android:label="Edit Delivery Vehicle"
+            android:parentActivityName=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity" />
+        </activity>
+        <activity
+            android:name=".HomeDeliveryInventory.ConfirmItemsForDelivery"
+            android:label="@string/title_activity_confirm_items_for_delivery"
+            android:parentActivityName=".HomeDeliveryInventory.HomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeDeliveryInventory.HomeDelivery" />
+        </activity>
+
+        <!--<activity-->
+            <!--android:name=".HomeDeliveryInventoryDeliveryGuy.DeliveryGuyInventory"-->
+            <!--android:label="@string/title_activity_vehicle_dashboard"-->
+            <!--android:parentActivityName=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity" />-->
+        <!--</activity>-->
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".HomeDeliveryInventoryDeliveryGuy.DeliveryGuyInventory"
+            android:label="@string/title_activity_vehicle_dashboard"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+        <!--<activity-->
+            <!--android:name=".DeliveryGuyDashboard.DeliveryGuyDashboard"-->
+            <!--android:label="Delivery Guy Dashboard"-->
+            <!--android:parentActivityName=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".aaDeprecated_DeliveryGuy.DeliveryVehicleActivity" />-->
+        <!--</activity>-->
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".DeliveryGuyDashboard.DeliveryGuyDashboard"
+            android:label="Delivery Guy Dashboard"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".QuickStockEditor.QuickStockEditor"
+            android:label="@string/title_activity_quick_stock_editor"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Recently added activities -->
+        <activity
+            android:name=".ItemsByCategoryTabsOld.ItemCategoriesTabs"
+            android:label="@string/title_activity_item_categories_tabs"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <activity
+            android:name=".ItemsByCategoryTabsOld.ItemCategories.AddItemCategory"
+            android:label="Add Item Category"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <activity
+            android:name=".ItemsByCategoryTabsOld.ItemCategories.EditItemCategory"
+            android:label="Edit Item Category"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <activity
+            android:name=".ItemsInShopOld.EditStock"
+            android:label="@string/title_activity_item_categories_tabs"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+        <!--<activity-->
+            <!--android:name=".CancelledOrders.CancelledOrdersHD"-->
+            <!--android:label="@string/title_activity_cancelled_orders_home_delivery"-->
+            <!--android:parentActivityName=".OrdersHomeDelivery.OrdersHomeDelivery"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value=".OrdersHomeDelivery.OrdersHomeDelivery" />-->
+        <!--</activity>-->
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".CancelledOrdersHD.CancelledOrdersHD"
+            android:label="@string/title_activity_cancelled_orders_home_delivery"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".OrderDetailHD.OrderDetail"
+            android:label="@string/title_activity_order_detail"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+        </activity>
+
+        <activity android:name=".SSEExample.SSEExample" />
+
+        <service
+            android:name=".Notifications.SSEIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".DeliveryAccounts.DeliveryGuyAccounts"
+            android:label="@string/title_activity_delivery_guy_accounts"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <activity
+            android:name=".DeliveryAccounts.EditProfile.EditDelivery"
+            android:label="Edit Delivery Account"
+            android:parentActivityName=".DeliveryAccounts.DeliveryGuyAccounts"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DeliveryAccounts.DeliveryGuyAccounts" />
+        </activity>
+        <activity
+            android:name=".DeliveryAccounts.DeliveryGuySelection.DeliveryGuySelection"
+            android:label="@string/title_activity_delivery_guy_selection"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+        </activity>
+        <activity
+            android:name=".DeliveryGuyHome.DeliveryGuyHome"
+            android:label="@string/title_activity_delivery_guy_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShopAdminHome.ShopAdminHome"
+            android:label="@string/title_activity_shop_admin_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShopAdminHome.EditProfile.EditShopAdmin"
+            android:label="Edit Shop Admin"
+            android:parentActivityName=".ShopAdminHome.ShopAdminHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopAdminHome.ShopAdminHome" />
+        </activity>
+        <activity
+            android:name=".ShopAdminHome.EditShop.EditShop"
+            android:label="Edit Shop"
+            android:parentActivityName=".ShopAdminHome.ShopAdminHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopAdminHome.ShopAdminHome" />
+        </activity>
+        <activity
+            android:name=".ItemsByCategoryTypeSimple.ItemsByCatSimple"
+            android:label="Items by Category"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemsInShopByCat.ItemsInStockByCat"
+            android:label="Items In Stock"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemsInShop.ItemsInShop"
+            android:label="Items In Stock"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Items.ItemsTypeSimple"
+            android:label="Items In Stock"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+        <!-- Google Maps Key -->
+
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB_BpmVLbrXdFzz1JyaYl21F2EDoU1EreM" />
+
+        <activity
+            android:name=".ShopAdminHome.EditShop.Utility.PickLocationActivity"
+            android:label="Pick Location"
+            android:parentActivityName=".ShopAdminHome.ShopAdminHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopAdminHome.ShopAdminHome" />
+        </activity>
+        <activity
+            android:name=".ShopStaffAccounts.ShopStaffAccounts"
+            android:label="@string/title_activity_shop_staff_accounts"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+        <activity
+            android:name=".ShopStaffAccounts.EditShopStaff.EditStaff"
+            android:label="Edit Shop Staff"
+            android:parentActivityName=".ShopStaffAccounts.ShopStaffAccounts"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopStaffAccounts.ShopStaffAccounts" />
+        </activity>
+        <activity
+            android:name=".ShopStaffHome.ShopStaffHome"
+            android:label="@string/title_activity_shop_staff_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShopStaffHome.EditStaffSelf.EditStaffSelf"
+            android:label="Edit Shop Staff"
+            android:parentActivityName=".ShopStaffHome.ShopStaffHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopStaffHome.ShopStaffHome" />
+        </activity>
+        <activity
+            android:name=".ShopStaffHome.ShopStaffDashboard"
+            android:label="Staff Dashboard"
+            android:parentActivityName=".ShopStaffHome.ShopStaffHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopStaffHome.ShopStaffHome" />
+        </activity>
+        <activity
+            android:launchMode="singleTop"
+            android:name=".OrderHistoryHD.OrderHistoryHD"
+            android:label="@string/title_activity_order_history_hd"
+            android:parentActivityName=".OrdersHDMenu.OrdersHomeDelivery"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OrdersHDMenu.OrdersHomeDelivery" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".OrderHistoryPFS.OrderHistoryPFS"
+            android:label="@string/title_activity_order_history_hd"
+            android:parentActivityName=".PickFromShopMenu.OrdersPickFromShop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PickFromShopMenu.OrdersPickFromShop" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".OrderDetailPFS.OrderDetailPFS"
+            android:label="Order Details"
+            android:parentActivityName=".PickFromShopMenu.OrdersPickFromShop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PickFromShopMenu.OrdersPickFromShop" />
+        </activity>
+
+
+
+        <activity
+            android:name=".PickFromShopMenu.OrdersPickFromShop"
+            android:label="Pick From Shop Orders"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".PickFromShopInventory.PickFromShopInventory"
+            android:label="Pick From Shop Inventory"
+            android:parentActivityName=".PickFromShopMenu.OrdersPickFromShop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PickFromShopMenu.OrdersPickFromShop" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".PickFromShopCancelled.CancelledOrdersPFS"
+            android:label="Cancelled Orders "
+            android:parentActivityName=".PickFromShopMenu.OrdersPickFromShop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PickFromShopMenu.OrdersPickFromShop" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".DeliveryGuyHome.EditProfile.EditDeliverySelf"
+            android:label="Edit Delivery"
+            android:parentActivityName=".DeliveryGuyHome.DeliveryGuyHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DeliveryGuyHome.DeliveryGuyHome" />
+        </activity>
+
+
+
+        <activity
+            android:name=".Services.ServicesActivity"
+            android:label="Discover Services"
+            android:launchMode="singleTop"
+            android:parentActivityName=".DistributorLogin"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DistributorLogin" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+        <activity
+            android:name=".ItemSubmissionsMenu.ItemSubmissionMenu"
+            android:label="Item Submissions"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+
+
+        <activity
+            android:name=".ItemsByCategoryTypeSimple.EditItem.EditItem"
+            android:label="Edit Item"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+
+
+        <activity
+            android:name=".ItemsByCategoryTypeSimple.EditItemImage.EditItemImage"
+            android:label="Edit Item Image"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+
+        <activity
+            android:name=".ShopHome.ShopHome"
+            android:label="Shop Home"
+            android:parentActivityName=".ShopAdminHome.ShopAdminHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopAdminHome.ShopAdminHome" />
+        </activity>
+
+
+
+
+
+        <activity
+            android:name=".FilterItemsBySpecifications.FilterItemsActivity"
+            android:label="Item Specifications"
+            android:parentActivityName=".ShopHome.ShopHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShopHome.ShopHome" />
+        </activity>
+
+
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+
+
+
+
+
+    </application>
+
+</manifest>

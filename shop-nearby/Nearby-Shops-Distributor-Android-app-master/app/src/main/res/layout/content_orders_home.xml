@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.nearbyshops.shopkeeperapp.OrdersHDMenu.OrdersHomeDelivery"
+    tools:showIn="@layout/activity_orders_home">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content_orders_pick_from_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+
+        <TextView
+            android:id="@+id/border_top"
+            android:background="#88000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/border_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_inventory"
+            android:text="Home Delivery Inventory"
+            android:textSize="17sp"
+            android:background="@color/light_grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/vertical_guide"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="10dp" />
+
+
+        <ImageView
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="60dp"
+            android:background="@color/gplus_color_2"
+            android:id="@+id/home_delivery_inventory"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toLeftOf="@+id/vertical_guide"
+            app:layout_constraintTop_toBottomOf="@+id/header_inventory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_add_white_24px"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/home_delivery_inventory"
+            app:layout_constraintRight_toRightOf="@+id/home_delivery_inventory"
+            app:layout_constraintBottom_toBottomOf="@+id/home_delivery_inventory"
+            android:padding="10dp"
+            android:id="@+id/text_home_delivery_inventory"
+            android:textSize="@dimen/menu_item_text_size"
+            android:textColor="#ffffff"
+            android:text="Home Delivery Inventory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="60dp"
+            android:background="@color/cyan900"
+            android:id="@+id/delivery_guy_inventory"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_inventory"
+            app:srcCompat="@drawable/ic_sort_black_24px"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintLeft_toLeftOf="@+id/vertical_guide" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/delivery_guy_inventory"
+            app:layout_constraintRight_toRightOf="@+id/delivery_guy_inventory"
+            app:layout_constraintBottom_toBottomOf="@+id/delivery_guy_inventory"
+            android:padding="10dp"
+            android:id="@+id/text_delivery_inventory"
+            android:textSize="@dimen/menu_item_text_size"
+            android:textColor="#ffffff"
+            android:text="Delivery Guy Inventory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/home_delivery_inventory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_dashboard"
+            android:text="Delivery Dashboard"
+            android:textSize="17sp"
+            android:background="@color/light_grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="60dp"
+            android:background="@color/slate_grey"
+            android:id="@+id/delivery_guy_dashboard"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toLeftOf="@+id/vertical_guide"
+            app:layout_constraintTop_toBottomOf="@+id/header_dashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_low_priority_black_24px"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/delivery_guy_dashboard"
+            app:layout_constraintRight_toRightOf="@+id/delivery_guy_dashboard"
+            app:layout_constraintBottom_toBottomOf="@+id/delivery_guy_dashboard"
+            android:padding="10dp"
+            android:id="@+id/text_delivery_dashboard"
+            android:textSize="@dimen/menu_item_text_size"
+            android:textColor="#ffffff"
+            android:text="Delivery Guy Dashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="60dp"
+            android:background="@color/buttonColor"
+            android:id="@+id/cancelled_orders"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/vertical_guide"
+            app:layout_constraintTop_toBottomOf="@+id/header_dashboard"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_close_white_24dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/cancelled_orders"
+            app:layout_constraintRight_toRightOf="@+id/cancelled_orders"
+            app:layout_constraintBottom_toBottomOf="@+id/cancelled_orders"
+            android:padding="10dp"
+            android:id="@+id/text_cancelled_orders"
+            android:textSize="@dimen/menu_item_text_size"
+            android:textColor="#ffffff"
+            android:text="Cancelled Orders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/delivery_guy_dashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/header_database"
+            android:text="Orders Database : Home Delivery"
+            android:textSize="17sp"
+            android:background="@color/light_grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+        <!--app:layout_constraintLeft_toLeftOf="@+id/vertical_guide"-->
+        <ImageView
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingBottom="60dp"
+            android:background="@color/gplus_color_2"
+            android:id="@+id/orders_history"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_database"
+            app:srcCompat="@drawable/ic_search_white_24px"
+            android:layout_width="0dp"
+            android:layout_height="150dp" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/orders_history"
+            app:layout_constraintRight_toRightOf="@+id/orders_history"
+            app:layout_constraintBottom_toBottomOf="@+id/orders_history"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/text_orders_history"
+            android:textSize="@dimen/menu_item_text_size"
+            android:textColor="#ffffff"
+            android:text="Orders History"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"
+            android:id="@+id/border_bottom"
+            android:background="#88000000"
+            app:layout_constraintTop_toBottomOf="@+id/orders_history"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+

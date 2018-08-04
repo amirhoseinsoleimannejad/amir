@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My halilsoroor</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_safhe3">safhe3</string>
+    <string name="title_activity_menue">menue</string>
+    <string name="title_activity_pizaa">pizaa</string>
+    <string name="title_activity_hamberger">hamberger</string>
+    <string name="title_activity_sosis">sosis</string>
+    <string name="title_activity_dhamberger">dhamberger</string>
+    <string name="title_activity_h2">h2</string>
+    <string name="title_activity_s1">s1</string>
+    <string name="title_activity_s2">s2</string>
+    <string name="title_activity_p1">p1</string>
+    <string name="title_activity_p2">p2</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.amhso.meshope">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    <application
+        android:name=".Otherclass.G"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LogoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DetailproductActivity" />
+        <activity android:name=".AllproductActivity" />
+        <activity android:name=".BasketActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".VerifysignupActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ShopingbagActivity" />
+
+
+        <activity android:name=".ProfileActivity" >
+
+        </activity>
+        <activity android:name=".AllproductjalilActivity" />
+        <activity android:name=".FavoriteActivity" >
+
+        </activity>
+        <activity android:name=".ChargeActivity"></activity>
+    </application>
+
+</manifest>

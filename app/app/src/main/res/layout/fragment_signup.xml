@@ -1,0 +1,121 @@
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amhso.meshope.fragmant.LoginFragment"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:singleLine="true" />
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:singleLine="true" />
+
+
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:singleLine="true" />
+
+
+
+
+            <EditText
+                android:id="@+id/meli"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/meli"
+                android:singleLine="true" />
+
+
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:singleLine="true" />
+
+
+
+
+            <EditText
+                android:id="@+id/repeatpassword"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:singleLine="true" />
+
+
+
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/red"
+                android:text="@string/login"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

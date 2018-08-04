@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B51504"
+    tools:context="com.example.linux.myhalilsoroor.s2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="850dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/s2"
+
+
+        ></RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jalil.myapplication1.MainActivity">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/DL"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+
+
+
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/icon"
+            />
+
+
+
+
+
+
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/NA"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+app:headerLayout="@layout/header"
+            app:menu="@menu/drawer"/>
+
+
+
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+

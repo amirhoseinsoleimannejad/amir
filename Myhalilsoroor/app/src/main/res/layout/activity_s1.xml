@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       tools:context="com.example.linux.myhalilsoroor.s1"
+    android:background="#B51504">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="850dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/s1"
+
+
+        ></RelativeLayout>
+
+</RelativeLayout>

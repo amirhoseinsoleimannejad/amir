@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group >
+        <item
+            android:id="@+id/presence1"
+            android:icon="@drawable/listorder"
+            android:title="حضور غیاب" />
+        <item
+            android:id="@+id/shop2"
+            app:showAsAction="always"
+            android:icon="@drawable/ordericon"
+            android:title="حضور غیاب" />
+
+        <item
+            android:id="@+id/signup"
+            android:icon="@drawable/signicon"
+            android:title="ثبت نام" />
+
+
+
+
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/messageicon"
+            android:title="درخواست ها" />
+
+
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profileicon"
+            android:title="پروفایل" />
+
+
+
+
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/reporticon"
+            android:title="گزارشات" />
+
+
+        <!--<item-->
+            <!--android:id="@+id/sharzh"-->
+            <!--android:icon="@drawable/iconexit"-->
+            <!--android:title="شارژ حساب" />-->
+
+
+
+        <item
+            android:id="@+id/exit"
+            app:showAsAction="always"
+            android:icon="@drawable/iconexit"
+            android:title="خروج" />
+
+
+    </group>
+</menu>

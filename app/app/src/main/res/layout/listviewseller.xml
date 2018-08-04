@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/baner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        app:rollviewpager_play_delay="5000"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/nameseller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:scaleType="fitEnd"/>
+
+
+        <TextView
+            android:id="@+id/allproductseller"
+            android:layout_width="wrap_content"
+            android:text="@string/allproducttext"
+            android:focusable="true"
+            android:clickable="true"
+            android:textColor="@color/red"
+            android:scaleType="fitStart"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <com.example.amhso.meshope.Otherclass.PagerContainer
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:background="@drawable/border_shadow"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0px"-->
+        <!--android:paddingLeft="24dp"-->
+        <!--android:paddingRight="12dp"-->
+        <!--android:layout_weight="1" />-->
+
+
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="300dp"-->
+        <!--android:layout_weight="1"  />-->
+
+
+    </com.example.amhso.meshope.Otherclass.PagerContainer>
+
+
+
+
+
+
+</LinearLayout>

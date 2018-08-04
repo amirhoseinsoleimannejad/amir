@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_logo"
+    android:id="@+id/con_bg"
+    tools:context="com.example.amhso.meshope.LogoActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cover_white"
+        android:isScrollContainer="false">
+
+
+        <ImageView
+            android:id="@+id/imagelogo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="center"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/meshope" />
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/text_logo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignTop="@+id/imagelogo" />-->
+
+
+        <TextView
+            android:id="@+id/des_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imagelogo"
+            android:gravity="center"
+            android:text="@string/title_logo_page"
+            android:textAlignment="center"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
